@@ -35,6 +35,7 @@ public class DBAdapterAddClass {
 	public static final String KEY_Desc = "description";
 	public static final String KEY_Days = "days";
 	public static final String KEY_Time = "time";
+	public static final String KEY_Room = "roomNumber";
 	
 	public static final String HW_ID = "_id";
 	public static final String HW_Class = "class";
@@ -62,7 +63,7 @@ public class DBAdapterAddClass {
 	// a SQL statement to create a new table
 	private static final String DB_Class = 
 		"CREATE TABLE classes (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-		 "class TEXT NOT NULL, description TEXT NOT NULL, days TEXT NOT NULL, time TIME NOT NULL);";
+		 "class TEXT NOT NULL, description TEXT NOT NULL, days TEXT NOT NULL, time TIME NOT NULL, roomNumber TEXT NOT NULL);";
 	private static final String DB_HW = 
 			"CREATE TABLE assignments (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
 			 "class TEXT NOT NULL, description TEXT NOT NULL, time TEXT NOT NULL, dateDue date NOT NULL);";
@@ -106,7 +107,7 @@ public class DBAdapterAddClass {
     private final Context context;	
     private DatabaseHelper helper;
     private SQLiteDatabase db;
-    private String[] allColumns = { KEY_ROWID, KEY_Class, KEY_Desc, KEY_Days, KEY_Time};
+    private String[] allColumns = { KEY_ROWID, KEY_Class, KEY_Desc, KEY_Days, KEY_Time, KEY_Room};
     private String[] hwList1 = { HW_ID, HW_Class, HW_Desc, HW_Time, HW_Date};
 
     // DBAdapter class constructor
@@ -142,12 +143,13 @@ public class DBAdapterAddClass {
 	  * @param pass user's password (string)
 	  * @return the row id, or -1 on failure
 	 */
-	public long insertClass(String name, String desc, String days, String time) {
+	public long insertClass(String name, String desc, String days, String time, String roomNumber) {
 		ContentValues vals = new ContentValues();
 		vals.put(KEY_Class, name);
 		vals.put(KEY_Desc, desc);
 		vals.put(KEY_Days, days);
 		vals.put(KEY_Time, time);
+		vals.put(KEY_Room, roomNumber);
 		return db.insert(DB_TABLE, null, vals);
 	}
 	public long insertHW(String className, String desc, String time, String dateDue) {
@@ -176,12 +178,13 @@ public long insertCOO(String name, Double lon, Double lat) {
 	
 	public long updateClass(Classes classes){
 		System.out.println(classes.getId() + " " + classes.getClassName() + classes.getDescription() 
-				+classes.getDays() + classes.getTime() );
+				+classes.getDays() + classes.getTime() + classes.getClassName() );
 		ContentValues vals = new ContentValues();
 		vals.put(KEY_Class, classes.getClassName());
 		vals.put(KEY_Desc, classes.getDescription());
 		vals.put(KEY_Days, classes.getDays());
 		vals.put(KEY_Time, classes.getTime());
+		vals.put(KEY_Room, classes.getRoomNumber());
 		return db.update(DB_TABLE, vals,  " _id "+" = "
 		+ classes.getId(), null );
 		
@@ -259,7 +262,7 @@ public long insertCOO(String name, Double lon, Double lat) {
 		    c.setDescription(cursor.getString(2));
 		    c.setDays(cursor.getString(3));
 		    c.setTime(cursor.getString(4));
-		    
+		    c.setRoomNumber(cursor.getString(5));
 		    
 		    
 		    return c;

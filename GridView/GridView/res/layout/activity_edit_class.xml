@@ -51,21 +51,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/daysOfClass1"
+        android:layout_centerVertical="true"
+        android:background="@drawable/sample"
         android:onClick="updateClass"
-        android:text="Edit"
-        android:background="@drawable/sample" />
+        android:text="Edit" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button11"
-        android:layout_alignBottom="@+id/button11"
+        android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/button11"
-        android:background="@drawable/sample" 
+        android:background="@drawable/sample"
         android:onClick="deleteClass"
         android:text="Delete" />
+
+    <EditText
+        android:id="@+id/editText33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/daysOfClass1"
+        android:hint="Room Number"
+        android:ems="10" />
 
 </RelativeLayout>
 

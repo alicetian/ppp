@@ -25,11 +25,13 @@ public class EditClass extends ActionBarActivity {
 	private EditText editDesc;
 	private EditText editTime;
 	private EditText editDays;
+	private EditText editRoom;
 	private String className;
 	private int classId;
 	private String classDesc;
 	private String classTime;
 	private String classDays;
+	private String roomNumber;
 	private DBAdapterAddClass db;
 	public static final int passedId = 0;
 	@Override
@@ -46,6 +48,7 @@ public class EditClass extends ActionBarActivity {
 	    editDesc = (EditText) findViewById(R.id.editText22);
 	    editTime = (EditText) findViewById(R.id.timeOfClass1);
 	    editDays = (EditText) findViewById(R.id.daysOfClass1);
+	    editRoom = (EditText) findViewById(R.id.editText33);
 		
 		Intent intent = getIntent();
         className = intent.getStringExtra("class_name");
@@ -53,12 +56,13 @@ public class EditClass extends ActionBarActivity {
         classDesc = intent.getStringExtra("class_desc");
         classTime = intent.getStringExtra("class_times");
         classDays = intent.getStringExtra("class_days");
+        roomNumber = intent.getStringExtra("class_roomNumber");
         
         editClass.setText(className);
         editDesc.setText(classDesc);
         editTime.setText(classTime);
         editDays.setText(classDays);
-        
+        editRoom.setText(roomNumber);
 
 		
 	}
@@ -99,11 +103,13 @@ public void updateClass(View view){
 	    editDesc = (EditText) findViewById(R.id.editText22);
 	    editTime = (EditText) findViewById(R.id.timeOfClass1);
 	    editDays = (EditText) findViewById(R.id.daysOfClass1);
+	    editRoom = (EditText) findViewById(R.id.editText33);
 	    String addClass1 = editClass.getText().toString();
 	    String addDesc1 = editDesc.getText().toString();
 	    String addTime1 = editTime.getText().toString();
 	    String addDate1 = editDays.getText().toString();
-	    Classes classes = new Classes(classId, addClass1, addDesc1, addTime1, addDate1);
+	    String addRoom1 = editRoom.getText().toString();
+	    Classes classes = new Classes(classId, addClass1, addDesc1, addTime1, addDate1, addRoom1);
 		
 		switch(view.getId()) {
 		case R.id.button11:

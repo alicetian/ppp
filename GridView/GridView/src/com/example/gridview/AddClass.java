@@ -22,6 +22,7 @@ public class AddClass extends ActionBarActivity {
 	private EditText addDesc;
 	private EditText addTime;
 	private EditText addDate;
+	private EditText addRoom;
 	private DBAdapterAddClass db;
 	
 	
@@ -89,17 +90,19 @@ public class AddClass extends ActionBarActivity {
 	    addDesc = (EditText) findViewById(R.id.editText2);
 	    addTime = (EditText) findViewById(R.id.timeOfClass);
 	    addDate = (EditText) findViewById(R.id.daysOfClass);
+	    addRoom = (EditText) findViewById(R.id.roomnumber);
 	    String addClass1 = addClass.getText().toString();
 	    String addDesc1 = addDesc.getText().toString();
 	    String addTime1 = addTime.getText().toString();
 	    String addDate1 = addDate.getText().toString();
-	    
+	    String addroom1 = addRoom.getText().toString();
+	   
 		
 		switch(view.getId()) {
 		case R.id.button1:
 
 			// insertUser() method will insert a user and return a row ID
-			long id = db.insertClass(addClass1, addDesc1, addDate1, addTime1);
+			long id = db.insertClass(addClass1, addDesc1, addDate1, addTime1, addroom1);
 			
 			// if the row ID is -1 there was some error, otherwise it was successful
 			if (id != -1)

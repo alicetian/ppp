@@ -68,6 +68,7 @@ public class ViewClasses extends ActionBarActivity {
 			    intent.putExtra("class_desc", classes.getDescription());
 			    intent.putExtra("class_times", classes.getTime());
 			    intent.putExtra("class_days", classes.getDays());
+			    intent.putExtra("class_roomNumber", classes.getRoomNumber());
 			    startActivity(intent);
 			    
 			    

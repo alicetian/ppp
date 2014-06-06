@@ -7,17 +7,19 @@ public class Classes {
 	private String description;
 	private String days;
 	private String time;
+	private String roomNumber;
 	
 	public Classes(){
 		
 	}
-	public Classes(int newId, String newCN, String desc, String newDays, String newTime){
+	public Classes(int newId, String newCN, String desc, String newDays, String newTime, String newRoomNumber){
 		
 		this.id = newId;
 		this.className = newCN;
 		this.description = desc;
 		this.days = newDays;
 		this.time = newTime;
+		this.roomNumber = newRoomNumber;
 		
 	}
 	public int getId() {
@@ -49,6 +51,12 @@ public class Classes {
 	}
 	public void setTime(String time) {
 		this.time = time;
+	}
+	public String getRoomNumber() {
+		return roomNumber;
+	}
+	public void setRoomNumber(String roomNumber) {
+		this.roomNumber = roomNumber;
 	}
 	@Override
     public String toString() {
