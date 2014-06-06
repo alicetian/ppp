@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#98dbce" >
+    
+    <LinearLayout 
+	    android:id="@+id/calendarLayout"
+	    
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	    
+          <CalendarView
+	        android:id="@+id/calendarView"
+	        android:layout_width="match_parent"
+	        android:layout_height="200dp"
+	        
+        	/>
+    
+    </LinearLayout>
+        
+    <LinearLayout 
+	    android:id="@+id/calendarLayout1"
+	    android:layout_below="@+id/calendarLayout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+          
+        <ListView
+	        android:id="@+id/listView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp" >
+    	</ListView>
+        
+        
+    
+    </LinearLayout>
+
+    
+    
+    
+    
+
+</RelativeLayout>

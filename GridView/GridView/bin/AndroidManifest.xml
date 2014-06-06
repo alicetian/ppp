@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.calstatela.cs594.plannerplusplus"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.gridview.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.gridview.ShowCalendar"
+            android:label="@string/title_activity_show_calendar" >
+        </activity>
+        <activity
+            android:name="com.example.gridview.AddEvent"
+            android:label="@string/title_activity_add_event" >
+        </activity>
+        <activity
+            android:name="com.example.gridview.ViewClasses"
+            android:label="@string/title_activity_view_classes" >
+        </activity>
+        <activity
+            android:name="com.example.gridview.AddClass"
+            android:label="@string/title_activity_add_class" >
+        </activity>
+        <activity
+            android:name="com.example.gridview.EditClass"
+            android:label="@string/title_activity_edit_class" >
+        </activity>
+        <activity
+            android:name="com.example.gridview.EditHw"
+            android:label="@string/title_activity_edit_hw" >
+        </activity>
+        <activity
+            android:name="com.example.gridview.AddCoordinates"
+            android:label="@string/title_activity_add_coordinates" >
+        </activity>
+    </application>
+
+</manifest>

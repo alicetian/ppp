@@ -1,0 +1,78 @@
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.gridview.AddEvent"
+    	tools:ignore="MergeRootFrame"
+    	android:background="#98dbce" >
+
+        <EditText
+            android:id="@+id/editClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:hint="@+string/class_hint"
+            android:ems="10" >
+
+            
+        </EditText>
+
+        <EditText
+            android:id="@+id/editAssignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editClass"
+            android:hint="@+string/assignment_hint"
+            android:ems="10" />
+
+        <Button
+            android:id="@+id/editTimeDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editAssignment"
+            android:layout_marginTop="7dp"
+            android:background="@color/babyblue"
+            android:text="@+string/time_due" />
+
+        <Button
+            android:id="@+id/editDateDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editTimeDue"
+            android:layout_marginTop="7dp"
+            android:background="@color/babyblue"
+            android:text="@+string/date_due" />
+        
+        <Button
+            android:id="@+id/editHwButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editDateDue"
+            android:layout_marginTop="7dp"
+            android:background="@color/babyblue"
+            android:onClick="updateHw"
+            android:text="Ok"
+             />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editHwButton"
+            android:background="@color/babyblue"
+            android:onClick="deleteHw"
+            android:text="Delete" />
+
+    </RelativeLayout>
+

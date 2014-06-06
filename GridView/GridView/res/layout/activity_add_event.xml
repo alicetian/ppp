@@ -1,0 +1,68 @@
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.gridview.AddEvent"
+    	tools:ignore="MergeRootFrame"
+    	android:background="#98dbce" >
+
+        <EditText
+            android:id="@+id/addClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:hint="@+string/class_hint"
+            android:ems="10" >
+
+            
+        </EditText>
+
+        <EditText
+            android:id="@+id/addAssignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/addClass"
+            android:hint="@+string/assignment_hint"
+            android:ems="10" />
+
+        <Button
+            android:id="@+id/timeDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/addAssignment"
+            android:layout_marginTop="7dp"
+            android:background="@color/babyblue"
+            android:text="@+string/time_due" />
+
+        <Button
+            android:id="@+id/dateDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/timeDue"
+            android:layout_marginTop="7dp"
+            android:background="@color/babyblue"
+            android:text="@+string/date_due" />
+        
+        <Button
+            android:id="@+id/redirectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/dateDue"
+            android:layout_marginTop="7dp"
+            android:background="@color/babyblue"
+            android:onClick="addEvent"
+            android:text="Ok"
+             />
+
+    </RelativeLayout>
+
+

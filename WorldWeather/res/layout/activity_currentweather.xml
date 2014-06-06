@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:paddingLeft="8dp"
+         android:paddingRight="8dp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="100dp" >
+
+         <ImageView
+             android:id="@+id/currentWeatherView"
+             android:layout_width="60dp"
+             android:layout_height="70dp"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:contentDescription="Current Weather"
+             android:layout_marginTop="16dp"
+             android:src="@drawable/rain" />
+
+         <TextView
+             android:id="@+id/tempView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignTop="@+id/currentWeatherView"
+             android:layout_marginLeft="80dp"
+             android:layout_alignLeft="@+id/tempView"
+             android:textSize="30sp"/>
+
+         <TextView
+             android:id="@+id/descView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="80dp"
+             android:layout_alignBottom="@+id/currentWeatherView"
+             android:textSize="30sp" />
+
+         <Button
+             android:id="@+id/mapbutton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignTop="@+id/tempView"
+             android:layout_marginRight="20dp"
+             android:background="@color/darkpurple"
+             android:textColor="@color/lightgray"
+             android:padding="5dp"
+             android:text="World Weather" />
+
+     </RelativeLayout>
+     
+     <TextView android:id="@+id/cityinfo"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="50sp"/>
+
+     <ListView android:id="@android:id/list"
+               android:layout_width="match_parent"
+               android:layout_height="0dip"
+               android:layout_weight="1"
+               android:drawSelectorOnTop="false"/>
+ </LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GridView</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_show_calendar">ShowCalendar</string>
+    <string name="title_activity_add_event">AddEvent</string>
+    <string name="assignment_hint">Assignment Description</string>
+    <string name="class_hint">Class Name</string>
+    <string name="date_due">Date Due</string>
+    <string name="time_due">Time Due</string>
+    <string name="redirect">Add</string>
+    <string name="class_hint2">Class Name</string>
+    <string name="class_description">Description</string>
+    <string name="date_due2">Date</string>
+    <string name="time_due2">Time</string>
+    <string name="title_activity_view_classes">View Classes</string>
+
+    <color name="babyblue">#C1DAD6</color>
+
+    <string name="title_activity_add_class">AddClass</string>
+    <string name="add_time">Enter Class Times</string>
+    <string name="days_attending">Enter Days of Class ex. "Monday, Wednesday"</string>
+    <string name="title_activity_edit_class">EditClass</string>
+    <string name="title_activity_edit_hw">EditHw</string>
+    <string name="title_activity_add_coordinates">AddCoordinates</string>
+
+</resources>
