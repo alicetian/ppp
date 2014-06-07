@@ -167,8 +167,52 @@ setDate.setOnClickListener(new View.OnClickListener() {
 	
 	            minute = selectedMinute;
 
-	
-	            setTime.setText(hour + ":" + minute);
+	            
+	            if (minute <= 9){
+	            	
+	            	if(hour > 12){
+	            		int hour1 = hour - 12;
+	            		
+	            		if(hour1 == 0)
+	            			setTime.setText(12 + ":0" + minute + "pm");
+	            		else
+	            			setTime.setText(hour1 + ":0" + minute + "pm");
+	            			
+	            	}
+	            		
+	            	else{
+	            		
+	            		if(hour == 0)
+	            			setTime.setText(12 + ":0" + minute + "am");
+	            		else
+	            			setTime.setText(hour + ":0" + minute + "am");
+	            		
+	            	}
+	            	
+	            }
+	            else {
+	            	
+	            	if(hour >= 12){
+	            		
+	            		int hour1 = hour - 12;
+	            		
+	            		if(hour1 == 0)
+	            			setTime.setText(12 + ":"+ minute + "pm");
+	            		else
+	            			setTime.setText(hour1 + ":"+ minute + "pm");
+	            	}
+	            	else{
+	            		
+	            		if(hour == 0)
+	            			setTime.setText(12 + ":" + minute + "am");
+	            		else
+	            			setTime.setText(hour + ":" + minute + "am");
+	            		
+	            		
+	            	}
+	            	
+	            }
+	            	
 	
 	         
 	        }
