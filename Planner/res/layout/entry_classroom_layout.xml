@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border" >
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:hint="Name of the location:"
+        android:ems="10" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/latText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameText"
+        android:layout_below="@+id/nameText"
+        android:hint = "latitude (or pick from map):"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <EditText
+        android:id="@+id/lonText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/latText"
+        android:layout_below="@+id/latText"
+        android:hint="longitude (or pick from map):"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lonText"
+        android:layout_marginRight="23dp"
+        android:text="Enter" />
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lonText"
+        android:layout_below="@+id/lonText"
+        android:text="Get LatLng from map" />
+
+</RelativeLayout>
